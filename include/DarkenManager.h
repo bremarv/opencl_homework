@@ -48,9 +48,16 @@ class DarkenManager
 
     int  m_frames;
 // windows timer
+#ifdef _WIN32
     UINT64 m_ticksPerSecond;
     UINT64 m_prev_fps_ticks;
     UINT64 m_start_ticks;
+#else
+    uint64_t m_ticksPerSecond;
+    uint64_t m_prev_fps_ticks;
+    uint64_t m_start_ticks;
+#endif //
+    
 
 
 };
